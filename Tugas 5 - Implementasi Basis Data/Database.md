@@ -1,4 +1,5 @@
 ## CREATE TABLE
+```sql
 -- 1. Tabel user
 CREATE TABLE user (
 user_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -104,8 +105,10 @@ content TEXT NOT NULL,
 published_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (admin_id) REFERENCES user(user_id)
 );   
+```
 
 ## INSERT INTO
+```sql
 -- Insert 5 data ke tabel user
 INSERT INTO user (user_id, name, email, password, phone, role, created_at) VALUES
 (1, 'Admin EcoWeave', 'admin@ecoweave.com', 'admin123', '081234567890', 'admin', '2026-06-19 04:00:14'),
@@ -184,4 +187,5 @@ INSERT INTO education_content (content_id, admin_id, title, content, published_a
 (2, 1, 'Tips Memilih Tanaman Hias untuk Kualitas Udara', 'Beberapa tanaman seperti Philodendron dan Lidah Mertua diketahui efektif menyaring udara dalam ruangan dan meningkatkan kadar oksigen di rumah.', '2026-06-19 11:00:14'),
 (3, 1, 'Pengolahan Tanah yang Baik', 'Pengolahan tanah adalah langkah pertama dan paling penting dalam bertani.', '2026-06-23 22:48:36'),
 (4, 1, 'Penggunaan Pupuk Organik', 'Pupuk organik menjadi pilihan yang lebih sehat dan ramah lingkungan dibandingkan dengan pupuk kimia.', '2026-06-23 22:49:06'),
-(5, 1, 'Teknik Irigasi Efisien', 'Irigasi yang efisien adalah kunci untuk mendapatkan hasil panen yang maksimal.', '2026-06-23 22:49:25');   
+(5, 1, 'Teknik Irigasi Efisien', 'Irigasi yang efisien adalah kunci untuk mendapatkan hasil panen yang maksimal.', '2026-06-23 22:49:25');
+```   
