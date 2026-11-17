@@ -71,6 +71,6 @@ class HomeController extends Controller
             'rating_value'     => $validated['rating_value'] ?? null,
         ]);
 
-        return response()->json(['status' => 'recorded']);
+        return back()->with('success', 'Terima kasih! Preferensi Anda telah dicatat oleh AI.');
     }
 }
